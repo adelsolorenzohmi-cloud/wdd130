@@ -1,0 +1,117 @@
+/* 1. Global Reset and Body Styles */
+* {
+    /* Critical for matching the layout—ensures padding and border don't increase the element's total size */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f5; /* Very light, slightly cool gray background */
+    margin: 0;
+    padding: 130px;
+    /* Use Flexbox to center the main content */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* 2. Main Container and Heading */
+main {
+    max-width: 600px; /* A slightly tighter max-width to match the image */
+    width: 100%;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px; /* Slightly rounded corners */
+    /* Subtle shadow (or none, depending on the desired exact match) */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #ddd; /* A very light border to define the edge */
+}
+
+h1 {
+    /* Use the dark blue color from the image */
+    color: #1a2b7f;
+    font-size: 1.5em;
+    font-weight: bold;
+    /* No border-bottom is used in the image */
+    margin-bottom: 25px;
+    padding-bottom: 0;
+}
+
+/* 3. Styling Individual Quiz Items */
+.quiz-item {
+    margin-bottom: 20px;
+    padding: 800; /* No extra padding on the item wrapper itself */
+}
+
+.quiz-item label {
+    display: block;
+    font-weight: normal; /* Use default weight for the number/question text */
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 1em;
+}
+
+/* 4. Styling Form Controls (Inputs, Textareas, Select) */
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #333;
+    /* Remove default margin-top from previous version */
+    margin-top: 0; 
+}
+
+textarea {
+    min-height: 80px; /* Reduced min-height to match the image better */
+    resize: none; /* Disable resizing for a cleaner look */
+}
+
+/* Focus State */
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #1a2b7f; /* Use the primary dark blue color for focus */
+    outline: none;
+    box-shadow: 0 0 0 1px #1a2b7f; /* Thin focus ring */
+}
+
+/* 5. Styling the Code Snippet (Question 4) */
+code {
+    display: inline-block; /* Allows the background to wrap tightly */
+    background-color: #333; /* Dark background as seen in the image */
+    color: #fff; /* White text on the dark background */
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-family: 'Consolas', monospace;
+    font-size: 0.9em;
+    margin: 8px 0 10px; /* Spacing above and below the code block */
+}
+
+/* 6. Styling the Submit Button */
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-top: 25px;
+    /* Use the primary dark blue color for the button */
+    background-color: #1a2b7f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-transform: uppercase;
+}
+
+button[type="submit"]:hover {
+    /* Slightly darker shade of blue on hover */
+    background-color: #0d1e6e;
+}
