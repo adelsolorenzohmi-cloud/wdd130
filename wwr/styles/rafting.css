@@ -1,0 +1,217 @@
+:root {
+  /* Colors */
+  --brand: #2a6f9f; 
+  --accent: #f7b267; 
+  --text: #4b4b4b; 
+  --background: #f7f7f7; 
+  /* Fonts */
+  --heading-font: "Times New Roman", "Georgia", serif;
+  --body-font: sans-serif, Arial, Helvetica, sans-serif;
+}
+
+/* Base Styles & Reset */
+*, input[type="radio"], input[type="checkbox"] { 
+  margin: 0; padding: 0; box-sizing: border-box; 
+}
+body { 
+  font-family: var(--body-font); color: var(--text); background: white; 
+}
+header, main, footer { max-width: 960px; margin: 0 auto; }
+
+/* 1. Header & Navigation */
+header {
+  display: grid; grid-template-columns: 100px 1fr auto; 
+  align-items: center; padding: 1rem; background: var(--background); 
+}
+#logo_link { grid-column: 1; }
+.logo { width: 100px; height: auto; }
+nav { grid-column: 3; }
+nav ul { display: flex; list-style: none; gap: 20px; }
+nav a {
+  text-decoration: none; color: var(--brand);
+  font-size: 1.2rem; padding: 10px;
+}
+h2 {
+  font-family: var(--heading-font); background: var(--brand); 
+  color: var(--background); padding: 16px; text-align: center;
+}
+main { padding: 20px; }
+
+/* 2. Reusable Utility Classes */
+.section-padding { padding: 2.5rem 1.5rem; }
+.card-style {
+    border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; transition: transform 0.3s ease-in-out;
+}
+.card-style:hover {
+    transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.button-primary {
+    display: inline-block; padding: 0.75rem 2rem;
+    background-color: var(--brand); color: var(--background);
+    text-decoration: none; border: none; border-radius: 0.5rem;
+    font-size: 1.1rem; font-weight: 600; cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.button-primary:hover {
+    background-color: #21587d; transform: translateY(-1px);
+}
+
+/* 3. Rafting Homepage Styles */
+.hero { position: relative; }
+.hero-image { display: block; width: 100%; height: auto; }
+.hero-title {
+  position: absolute; top: 15%; left: 50%;
+  transform: translate(-50%, -50%); width: 80%;
+  padding: 20px; text-align: center;
+  background-color: rgba(0, 0, 0, 0.6); color: var(--background); 
+}
+.hero article {
+  position: absolute; bottom: 0; left: 0;
+  width: 100%; background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px; box-sizing: border-box;
+}
+.article-image { float: right; width: 125px; margin-left: 15px; }
+
+.history-content { display: flex; gap: 20px; padding: 20px; align-items: center; }
+.history-content p { flex: 1; }
+.history-image-container { width: 300px; flex-shrink: 0; text-align: center; }
+.history-image-container img { width: 100%; height: auto; border-radius: 10px; }
+
+.adventures { text-align: center; }
+.adventure-gallery {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px; padding: 2rem;
+}
+.adventure-gallery figure { text-align: center; }
+.adventure-gallery img {
+  width: 100%; height: 150px; object-fit: cover; border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.adventure-gallery figcaption { font-style: italic; margin-top: 5px; color: var(--text); }
+
+
+/* 4. Trips & Testimonials */
+.trip-card-container {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem; margin-top: 2rem;
+}
+.trip-card h3 { color: var(--brand); margin-bottom: 0.5rem; font-size: 1.5rem; }
+.trip-card p { color: var(--text); font-size: 0.95rem; line-height: 1.4; }
+
+.testimonials-grid {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 1.5rem; padding: 2rem 0;
+}
+.testimonial {
+    flex: 1 1 300px; max-width: 400px; padding: 1.5rem; 
+    text-align: center; font-style: italic; color: #444;
+}
+.testimonial footer {
+    margin-top: 1rem; font-style: normal; font-weight: 700;
+    color: var(--brand); font-size: 1rem;
+}
+
+
+/* 5. Contact Us Page */
+.company-info { text-align: center; padding-bottom: 30px; line-height: 1.5; }
+.company-info h1 { font-family: var(--heading-font); color: var(--text); background: none; padding: 0; margin-bottom: 5px; }
+.company-info address { font-style: normal; color: var(--text); margin-top: 5px; }
+
+.contact-grid { 
+  display: grid; grid-template-columns: 1fr 1fr; 
+  gap: 50px; margin-bottom: 40px; align-items: flex-start; 
+}
+.map iframe { width: 100%; height: 450px; display: block; border-radius: 5px; }
+
+/* Form Layout & Inputs */
+form { display: grid; grid-template-columns: auto 1fr; gap: 5px; align-items: flex-start; }
+
+form label:not(.radio-option):not([for="newsletter"]),
+form p {
+  grid-column: 1 / 2; text-align: left; justify-self: start; 
+  padding: 3px 5px 0 0; width: auto;
+}
+form p:first-of-type { 
+  text-align: left; margin: 0; padding-top: 5px; 
+  font-weight: bold; justify-self: start; 
+}
+
+form input[type="text"], form input[type="email"], form textarea {
+  grid-column: 2 / 3; padding: 10px; border: 1px solid var(--text);
+  border-radius: 5px; width: 100%;
+}
+form input[type="text"], form input[type="email"] { height: 35px; } 
+form textarea { height: 70px; resize: vertical; } 
+
+/* Radio Group */
+.radio-group { grid-column: 2 / 3; display: flex; flex-direction: column; }
+.radio-option { display: flex; align-items: center; line-height: 1.2; margin-bottom: 10px; }
+.radio-option input[type="radio"] { margin-right: 5px; order: -1; }
+
+/* Newsletter Checkbox */
+form input[type="checkbox"] { 
+  grid-column: 1 / 2; justify-self: end; align-self: center;
+  margin: 5px 5px 0 0; padding: 0;
+}
+form label[for="newsletter"] { 
+  grid-column: 2 / 3; display: flex; align-items: center; 
+  justify-content: flex-start; margin-top: 5px; padding: 0;
+}
+
+/* Button Styling (Submit) */
+form button[type="submit"] {
+  grid-column: 1 / 3; padding: 15px; 
+  background: var(--brand); color: var(--background);
+  border: none; border-radius: 5px; font-size: 1.2rem; 
+  cursor: pointer; margin-top: 15px; width: 100%; 
+  justify-self: stretch; 
+}
+form button[type="submit"]:hover { background: #1e5a82; }
+
+
+/* 6. Employee Profiles */
+.employee-profiles { 
+  text-align: center; padding: 40px 0; background: var(--background); 
+}
+.employee-profiles h2 {
+  background: transparent; color: var(--text); padding: 0; 
+  margin-bottom: 40px; font: 2em/1.2 var(--body-font); 
+  text-transform: uppercase; letter-spacing: 2px;
+}
+.profile-cards { display: flex; gap: 30px; justify-content: center; padding: 20px; }
+
+/* Profile Card Styling */
+.profile-card {
+  flex: 1; max-width: 250px; padding: 15px; border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); text-align: center;
+  background: white; border: 1px solid #e0e0e0;
+}
+.profile-image-container { margin-bottom: 20px; }
+.profile-image-container img {
+  width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px;
+  filter: grayscale(100%); transition: filter 0.3s ease; border: none;
+}
+.profile-image-container img:hover { filter: grayscale(0%); }
+
+.profile-card h3 { 
+  font-family: var(--body-font); color: var(--text); 
+  font-weight: bold; margin-bottom: 5px; font-size: 1.2rem; 
+}
+.job-title { 
+  font-style: normal; color: #777; margin-bottom: 15px; 
+  font-size: 0.9em; font-weight: normal; 
+}
+.bio { text-align: center; font-size: 0.9em; line-height: 1.5; }
+
+
+/* 7. Footer Styles */
+footer {
+  display: grid; grid-template-columns: 1fr auto 1fr;
+  align-items: center; padding: 1rem;
+  background: var(--background);
+  margin-top: 30px;
+}
+.copyright { grid-column: 2 / 3; text-align: center; margin: 0; }
+.socialmedia { display: flex; gap: 15px; justify-content: flex-end; grid-column: 3 / 4; }
+.socialmedia img { width: 40px; height: 40px; border-radius: 0; }
