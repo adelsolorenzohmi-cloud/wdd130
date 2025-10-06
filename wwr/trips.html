@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore all the available white water rafting trips at Canyon Rapids. Choose from half-day, full-day, and multi-day adventures!">
+    <meta name="author" content="Adelso Tzep Chox">
+    <title>Available Rafting Trips | Canyon Rapids</title>
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" id="logo_link">
+            <img class="logo" src="images/logo.jpeg" alt="Rafting Site Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="trips-page-main">
+
+        <!-- Trips Page Hero Section - Uses image_ad0eb1.jpg -->
+        <div class="trips-hero">
+            <img src="images/rafting-trip.webp" alt="Rafting trip plunging through intense whitewater rapids."
+                class="trips-hero-image">
+            <h1 class="trips-hero-title">Our Unforgettable Rafting Adventures</h1>
+        </div>
+
+        <section class="trips-grid-container">
+            <h2>Featured Trip Packages</h2>
+
+            <!-- Trip Card 1: Half-Day Fun - Uses image_ac07cd.jpg -->
+            <div class="trip-card card-style">
+                <img src="images/rafting-1.webp" alt="A single raft on a calm, misty river at sunset."
+                    class="trip-card-image">
+                <div class="trip-content-wrapper">
+                    <h3>The Canyon Quick Splash</h3>
+                    <p class="trip-details">**Duration:** Half-Day (3 hours)</p>
+                    <p class="trip-details">**Price:** $50 per person</p>
+                    <p class="trip-description">Perfect for beginners or those short on time. Experience the most
+                        exciting class II and III rapids and be back by lunch!</p>
+                    <a href="contact.html" class="button-primary book-now">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Trip Card 2: Full-Day Challenge - Uses image_ac22cc.jpg -->
+            <div class="trip-card card-style">
+                <img src="images/rafting-2.webp" alt="Rafter guides standing next to their rafts, ready for a trip."
+                    class="trip-card-image">
+                <div class="trip-content-wrapper">
+                    <h3>The Full River Challenge</h3>
+                    <p class="trip-details">**Duration:** Full-Day (7 hours)</p>
+                    <p class="trip-details">**Price:** $120 per person</p>
+                    <p class="trip-description">Take on the full length of the river, including the thrilling Class IV
+                        section. Includes a riverside lunch and all gear.</p>
+                    <a href="contact.html" class="button-primary book-now">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Trip Card 3: Multi-Day Expedition - Uses Placeholder Image (trip-multi-day.jpg) -->
+            <div class="trip-card card-style">
+                <img src="images/rafting-3.jpg" alt="A quiet campsite next to the river on a multi-day expedition"
+                    class="trip-card-image">
+                <div class="trip-content-wrapper">
+                    <h3>The Wilderness Expedition</h3>
+                    <p class="trip-details">**Duration:** 3 Days / 2 Nights</p>
+                    <p class="trip-details">**Price:** $450 per person</p>
+                    <p class="trip-description">Our signature trip! Two nights of riverside camping under the stars,
+                        incredible rapids, and pristine wilderness exploration. Meals provided.</p>
+                    <a href="contact.html" class="button-primary book-now">Book Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Required Trip Details Table -->
+        <section class="trip-table-section section-padding">
+            <h2>Full Trip Details at a Glance</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Trip Name</th>
+                        <th>Duration</th>
+                        <th>Rapids Class</th>
+                        <th>Min Age</th>
+                        <th>Price (per person)</th>
+                        <th>Availability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Canyon Quick Splash</td>
+                        <td>3 Hours (Half-Day)</td>
+                        <td>II - III</td>
+                        <td>8</td>
+                        <td>$50</td>
+                        <td>Daily, May - Sep</td>
+                    </tr>
+                    <tr>
+                        <td>Full River Challenge</td>
+                        <td>7 Hours (Full-Day)</td>
+                        <td>III - IV</td>
+                        <td>12</td>
+                        <td>$120</td>
+                        <td>Tues, Thurs, Sat</td>
+                    </tr>
+                    <tr>
+                        <td>The Wilderness Expedition</td>
+                        <td>3 Days / 2 Nights</td>
+                        <td>IV - V</td>
+                        <td>16</td>
+                        <td>$450</td>
+                        <td>Monthly, Jun - Aug</td>
+                    </tr>
+                    <tr>
+                        <td>Sunset Paddle</td>
+                        <td>2 Hours</td>
+                        <td>I - II</td>
+                        <td>5</td>
+                        <td>$35</td>
+                        <td>Fri Evening</td>
+                    </tr>
+                    <tr>
+                        <td>Beginner's Float</td>
+                        <td>4 Hours (Half-Day)</td>
+                        <td>I - II</td>
+                        <td>6</td>
+                        <td>$75</td>
+                        <td>Mon, Wed, Fri</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <!-- CTA Section (Required Call to Action) -->
+        <section class="newsletter-cta-section section-padding">
+            <h2>Need a Custom Trip or Have Questions?</h2>
+            <p>Planning a large group event, corporate retreat, or special family adventure? Our guides can tailor a
+                trip just for you! Contact us today to discuss your perfect river journey.</p>
+            <a href="contact.html" class="button-primary cta-button">Contact Us for Custom Trips</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p class=" copyright">© 2025 - Canyon Rapids - Adelso Tzep Chox</p>
+
+        <nav class="socialmedia">
+            <a href="https://facebook.com">
+                <img src="images/facebook-icon.jpg" alt="Facebook Icon">
+            </a>
+            <a href="https://linkedin.com">
+                <img src="images/linkedin-icon.png" alt="LinkedIn Icon">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram-icon.jpg" alt="Instagram Icon">
+            </a>
+        </nav>
+    </footer>
+</body>
+
+</html>
